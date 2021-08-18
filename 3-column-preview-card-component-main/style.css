@@ -1,0 +1,124 @@
+:root {
+  --clr-orage: hsl(31, 77%, 52%);
+  --clr-darkcyan: hsl(184, 100%, 22%);
+  --clr-verydarkcyan: hsl(179, 100%, 13%);
+  --clr-transparentwhite: hsla(0, 0%, 100%, 0.75);
+  --clr-verylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-verylightgray);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: var(--clr-verylightgray);
+  font-size: 48px;
+  text-transform: uppercase;
+  margin: 48px 0px;
+  font-family: "Big Shoulders Display", sans-serif, cursive;
+}
+
+p {
+  color: var(--clr-transparentwhite);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  margin-bottom: 96px;
+  line-height: 24px;
+}
+
+.container {
+  display: flex;
+  width: 876px;
+  margin: auto;
+}
+
+.sedans,
+.suv,
+.luxury {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.sedans {
+  background-color: var(--clr-orage);
+
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.suv {
+  background-color: var(--clr-darkcyan);
+}
+
+.luxury {
+  background-color: var(--clr-verydarkcyan);
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: var(--clr-verylightgray);
+  border: 2px solid transparent;
+  outline: none;
+  width: fit-content;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+button:hover {
+  color: var(--clr-verylightgray);
+  border: 2px solid var(--clr-verylightgray);
+}
+
+.sedan__button {
+  color: var(--clr-orage);
+}
+
+.suv__button {
+  color: var(--clr-darkcyan);
+}
+.luxury__button {
+  color: var(--clr-verydarkcyan);
+}
+
+.sedan__button:hover {
+  background-color: var(--clr-orage);
+}
+.suv__button:hover {
+  background-color: var(--clr-darkcyan);
+}
+.luxury__button:hover {
+  background-color: var(--clr-verydarkcyan);
+}
+
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+@media (max-width: 950px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+    padding: 48px;
+  }
+
+  .sedans {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+  }
+  .luxury {
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+}
