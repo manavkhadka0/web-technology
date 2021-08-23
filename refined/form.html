@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+
+.
+
+<body>
+    <div>
+        <p>User Registration Form</p>
+
+        <form method="POST" action="#">
+            <div>
+                <label>Name: </label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label>Email: </label>
+                <input id="email" type="email">
+            </div>
+            <div>
+                <label>Gender: </label>
+                <input type="radio" name="gender">
+                <label for="">Male</label>
+                <input type="radio" name="gender">
+                <label for="">Female</label>
+
+            </div>
+            <div>
+                <label>Phone: </label>
+                <input id="phone" type="tel">
+            </div>
+            <div>
+                <label>Interest: </label>
+                <textarea id="interest" rows="7" cols="40"></textarea>
+            </div>
+            <button type="submit" onclick="validate(event)">Register</button>
+
+        </form>
+        <p id="error"></p>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
